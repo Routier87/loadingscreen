@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loading Screen</title>
+
+  <link rel="preload" as="image" href="images/background.png" />
+  <link rel="preload" as="image" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="images/logo.png" alt="Logo serveur" />
+    </div>
+
+    <div class="actions">
+      <button id="muteBtn" class="icon-btn" type="button" aria-label="Couper le son" title="Couper / remettre le son">
+        🔊
+      </button>
+
+      <div class="menu">
+        <button id="staffBtn" class="btn" type="button" aria-haspopup="true" aria-expanded="false">
+          Staff ▾
+        </button>
+
+        <div id="staffMenu" class="dropdown" role="menu" aria-label="Menu staff">
+          <div class="dropdown-section">
+            <div class="dropdown-title">Fondateurs</div>
+            <ul>
+              <li>— Nom à ajouter</li>
+              <li>— Nom à ajouter</li>
+            </ul>
+          </div>
+
+          <div class="dropdown-section">
+            <div class="dropdown-title">Co-fondateurs</div>
+            <ul>
+              <li>— Nom à ajouter</li>
+            </ul>
+          </div>
+
+          <div class="dropdown-section">
+            <div class="dropdown-title">Développeurs</div>
+            <ul>
+              <li>— Nom à ajouter</li>
+            </ul>
+          </div>
+
+          <div class="dropdown-section">
+            <div class="dropdown-title">Responsables serveur</div>
+            <ul>
+              <li>— Nom à ajouter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="center">
+    <div class="card">
+      <div class="title">Chargement du serveur…</div>
+      <div class="subtitle">Préparation des ressources, connexion en cours</div>
+
+      <div class="progress">
+        <div id="bar" class="bar"></div>
+      </div>
+
+      <div class="hint" id="hint">Astuce : rejoins notre Discord pour les infos & annonces.</div>
+    </div>
+  </main>
+
+  <audio id="music" src="music/music.mp3" preload="auto" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
